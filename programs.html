@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs — Shramik Shanti Campus</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container"><div class="navbar-inner">
+    <a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="Logo" /><div class="brand-text"><span class="brand-name">Shramik Shanti Campus</span><span class="brand-sub">Affiliated to Pokhara University</span></div></a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html" class="active">Programs</a></li>
+      <li><a href="faculty.html">Faculty</a></li><li><a href="notices.html">Notices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Academic Degree Frameworks</h1>
+    <p>University-accredited degree pathways engineered explicitly for competitive industrial execution targets.</p>
+  </div>
+</section>
+
+<section class="section container programs-grid">
+    <div class="program-card">
+      <div class="program-icon">💻</div>
+      <span class="program-tag">BCSIT</span>
+      <h3>B.C.S.I.T.</h3>
+      <p>Four-year computational computing track exploring software engineering logic, system architectures, networks, and cloud deployment paradigms.</p>
+      <div class="program-meta"><span>📅 4 Years</span><span>🪑 72 Seats</span></div>
+      <button class="btn btn-navy course-trigger" 
+              data-title="Bachelor of Computer Science & IT (BCSIT)"
+              data-seats="72 Seats" data-duration="4 Years"
+              data-eligibility="Minimum 'C' grade average across all subjects in 10+2 high school frameworks."
+              data-details="Deep dive tracks covering Object-Oriented Logic, Relational Database Engineering, Applied Networking Systems, Full-Stack Web architectures, and cloud execution pipelines."
+              data-careers="Full Stack Engineer, System Administrator, Cloud Consultant, DevOps Architecture Specialist.">View Details</button>
+    </div>
+
+    <div class="program-card">
+      <div class="program-icon">🌱</div>
+      <span class="program-tag">BAIDS</span>
+      <h3>B.A.I.D.S.</h3>
+      <p>Advanced four-year path exploring automated calculations, statistical analytics, neural data training pipelines, and machine learning models.</p>
+      <div class="program-meta"><span>📅 4 Years</span><span>🪑 48 Seats</span></div>
+      <button class="btn btn-gold course-trigger" 
+              data-title="Bachelor of Artificial Intelligence & Data Science (BAIDS)"
+              data-seats="48 Seats" data-duration="4 Years"
+              data-eligibility="10+2 tracking completed with clear foundational focus inside Mathematics and Statistics metrics."
+              data-details="Balance statistical tracking layers straight with advanced algorithmic loops. Explore predictive models, data pipeline building, big data cluster structures, and deep learning neural loops."
+              data-careers="Data Scientist, AI Architect, Predictive Modeler, Big Data Pipeline Systems Specialist.">View Details</button>
+    </div>
+
+    <div class="program-card">
+      <div class="program-icon">⚖️</div>
+      <span class="program-tag">BALLB</span>
+      <h3>B.A.L.L.B.</h3>
+      <p>Integrated five-year professional jurisprudence curriculum delivering civil, criminal, corporate, and constitutional litigation frameworks.</p>
+      <div class="program-meta"><span>📅 5 Years</span><span>🪑 60 Seats</span></div>
+      <button class="btn btn-navy course-trigger" 
+              data-title="Bachelor of Arts in Law & Bachelor of Laws (BALLB)"
+              data-seats="60 Seats" data-duration="5 Years"
+              data-eligibility="Open admission path matching across Science, Management, or Arts tracks at 10+2 level."
+              data-details="Coordinates thorough legal theory with functional court practice. Core syllabus maps explore Criminal Law matrices, Corporate Judiciaries, Case interpretation, and continuous Mock Court simulations."
+              data-careers="Corporate Litigator, Judicial Services Advisor, Legal Advocate Officer, Appellate Counsel.">View Details</button>
+    </div>
+
+    
+</section>
+
+<div class="course-modal-overlay" id="courseModal">
+  <div class="course-modal-content">
+    <button class="course-modal-close" id="closeModalBtn">×</button>
+    <div class="modal-body-layout">
+      <div class="modal-badge-row">
+        <span class="modal-pill" id="modalDuration">--</span>
+        <span class="modal-pill" id="modalSeats">--</span>
+      </div>
+      <h2 id="modalTitle">Loading Parameters...</h2>
+      <div class="modal-field-block">
+        <h4>📋 Description & Scope Framework</h4>
+        <p id="modalDetails">Loading files context data...</p>
+      </div>
+      <div class="modal-field-block">
+        <h4>🎓 Core Eligibility Mapping</h4>
+        <p id="modalEligibility">Loading metric requirements...</p>
+      </div>
+      <div class="modal-field-block">
+        <h4>💼 Industry Career Directions</h4>
+        <p id="modalCareers" style="font-weight: 700; color: var(--brand-dark);">Loading fields matrix...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
