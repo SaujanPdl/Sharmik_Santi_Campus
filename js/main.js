@@ -1,11 +1,10 @@
 /**
- * Shramik Shanti Campus - Unified Operational System Framework Engine
- * Manages Dynamic Highlight Navigations, Mobile Side Drawers, AJAX Forms, Content Taxonomy Tag Filters, and Popups.
+ * Shramik Shanti Campus - System Infrastructure Operations Engine
  */
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("SSC Operations Infrastructure Engine Active.");
+    console.log("SSC Operations Engine Core Online.");
 
-    /* 1. Mobile Menu Viewport Drawer Toggle Engine */
+    /* 1. Universal Mobile Menu Viewport Tray Toggles */
     const hamburgerBtn = document.getElementById("hamburger");
     const mobileNavTray = document.getElementById("mobile-nav");
     
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hamburgerBtn.classList.toggle("active");
             mobileNavTray.classList.toggle("open");
             
-            // Freeze document context backdrop scrolling when layout drawer expands
+            // Prevent main page scrolling when mobile menu drawer is open
             if (mobileNavTray.classList.contains("open")) {
                 document.body.style.overflow = "hidden";
             } else {
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Close layout tray automatically if user selects background focus bounds
+        // Close menu immediately if user clicks anywhere outside the tray layout
         document.addEventListener("click", (e) => {
             if (!mobileNavTray.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 hamburgerBtn.classList.remove("active");
@@ -33,10 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* 2. Dynamic Auto-Navigation Highlight Link Match Framework */
+    /* 2. Interactive Navigation Link Sync Highlight */
     const currentFileName = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(".navbar-links a, .mobile-nav a");
-    
     navLinks.forEach(link => {
         if (link.getAttribute("href") === currentFileName) {
             link.classList.add("active");
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /* 3. High-Fidelity Scroll-Triggered Metric Counters Animation */
+    /* 3. Advanced Scroll-Triggered Metric Counters Animation */
     const counters = document.querySelectorAll('.counter, .stat-num[data-count]');
     const animationDuration = 2000; 
 
@@ -59,10 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const updateCounter = (currentTime) => {
                 const elapsedTime = currentTime - startTime;
                 const progress = Math.min(elapsedTime / animationDuration, 1);
-                const easeProgress = progress * (2 - progress); // Ease-Out deceleration path
+                const easeProgress = progress * (2 - progress); // Ease Out Deceleration Math
                 const currentCount = Math.floor(easeProgress * targetNumber);
 
                 counterElement.innerText = currentCount + suffix;
+
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, { threshold: 0.2 }); 
-        
         const statsSection = document.querySelector('.stats-bar');
         if (statsSection) statsObserver.observe(statsSection);
     } else {
@@ -90,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* 4. Cross-Page Filtering Segments (Notice Dashboard Streams & Media Gallery Content Filters) */
+    /* 4. Cross-Page Content Taxonomy Filtering (Notices & Gallery) */
     const filterButtons = document.querySelectorAll(".filter-btn");
     const noticeCards = document.querySelectorAll(".notice-card");
     const noticeItems = document.querySelectorAll(".notice-item");
@@ -155,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                     const res = await response.json();
                     if (response.status === 200 && res.success) {
-                        alert("Thank you! Academic inquiry recorded cleanly into database systems.");
+                        alert("Thank you! Submission written successfully to registration servers.");
                         form.reset();
                     } else {
                         alert("Error: " + res.message);
@@ -170,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /* 6. Integrated Multi-Mode Modal Popup Module (Academic Programs & Notices Details Overlay) */
+    /* 6. Integrated Multi-Mode Modal Popup Module (Academic Programs & Notices Details) */
     const modalOverlay = document.getElementById("courseModal");
     const closeOverlayBtn = document.getElementById("closeModalBtn");
     const modalTriggers = document.querySelectorAll(".course-trigger, .notice-modal-trigger, .notice-card, .notice-item");
@@ -190,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mDetails.innerText = button.getAttribute("data-details") || button.querySelector("p").innerText;
 
             if (isNoticeMode) {
-                const dateText = button.getAttribute("data-date") || button.querySelector(".notice-date-text")?.innerText || button.querySelector(".notice-date")?.innerText || "Recent Announcement";
+                const dateText = button.getAttribute("data-date") || button.querySelector(".notice-date-text")?.innerText || button.querySelector(".notice-date")?.innerText || "Recent";
                 const catText = button.getAttribute("data-mode") || button.getAttribute("data-category") || "General Notice";
                 
                 mDuration.innerText = dateText;
@@ -205,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             modalOverlay.classList.add("modal-active");
-            document.body.style.overflow = "hidden"; // Freeze background scroll
+            document.body.style.overflow = "hidden"; 
         };
 
         const closeModal = () => {

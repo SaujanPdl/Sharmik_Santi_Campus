@@ -1483,19 +1483,33 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 992px) {
-    .programs-grid, .features-grid, .faculty-grid, .gallery-grid, .contact-grid, .footer-grid, .about-story, .contact-info-cards, .stats-grid, .steps-grid, .docs-grid {
+    /* --- 1. Universal Layout Grid Collapses --- */
+    .programs-grid, 
+    .features-grid, 
+    .faculty-grid, 
+    .gallery-grid, 
+    .contact-grid, 
+    .footer-grid, 
+    .about-story, 
+    .contact-info-cards, 
+    .stats-grid, 
+    .steps-grid, 
+    .docs-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    
-    .navbar-links {
-        display: none;
+
+    .affiliation-box {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 3rem;
     }
     
-    .hamburger {
-        display: block;
+    .values-grid {
+        grid-template-columns: 1fr;
     }
-    
+
+    /* --- 2. Global Section & Banner Scaling --- */
     .section {
         padding: 5rem 0;
     }
@@ -1507,15 +1521,47 @@ h1, h2, h3, h4 {
     .hero h1 {
         font-size: 2.75rem;
     }
-    
-    .affiliation-box {
+
+    .hero-inner {
         flex-direction: column;
-        gap: 2.5rem;
-        padding: 3rem;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    /* --- 3. Clean Responsive Header & Drawer Navigation --- */
+    .navbar-links {
+        display: none;
     }
     
-    .values-grid {
-        grid-template-columns: 1fr;
+    .navbar-cta {
+        display: none; /* Safely hides flat desktop apply button under phone screen sizes */
+    }
+    
+    .hamburger {
+        display: block; /* Ensures mobile layout triggers render across all device types */
+    }
+
+    /* Active dynamic toggle layer rules for js/main.js synchronization */
+    .mobile-nav.open {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(11.5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-11.5px);
     }
 }
 
